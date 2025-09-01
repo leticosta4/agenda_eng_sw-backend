@@ -22,9 +22,7 @@ services:
     command: ["mvn", "spring-boot:run", "-Dspring-boot.run.profiles=dev", "-Dspring-boot.run.jvmArguments=-Dspring.devtools.restart.enabled=true -Dspring.devtools.livereload.enabled=true"]
 
   database:
-    image: postgres:17
-    env_file:
-      - .env
+    image: postgres
     environment:
       - POSTGRES_DB=${POSTGRES_DB}
       - POSTGRES_USER=${POSTGRES_USER}
@@ -43,6 +41,11 @@ services:
       interval: 5s
       timeout: 5s
       retries: 5
+  adminer:
+    image: adminer
+    restart: unless-stopped
+    ports:
+      - 8090:8080
 
 volumes:
   postgres_data:
