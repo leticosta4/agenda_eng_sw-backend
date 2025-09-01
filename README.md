@@ -10,6 +10,11 @@ deverão existir dois contatos com o mesmo telefone.
 
 [Repositório do front](https://github.com/VerttB/agenda-frontend)
 
+
+
+## Tabela
+![Imagem das tabelas](db/database.png)
+
 # Instruções
 
 ###  Criar Arquivo de secrets
