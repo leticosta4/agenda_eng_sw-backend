@@ -47,14 +47,12 @@ public class Contato {
         this.nome = nome;
         this.telefone = telefone;
         this.criadoEm = LocalDateTime.now();
-        this.modificadoEm = LocalDateTime.now(); //só em um primeiro momento
         this.agenda = agenda;
     }
 
     @PrePersist
     protected void prePersist() {
         criadoEm = LocalDateTime.now();
-        modificadoEm = LocalDateTime.now();
     }
 
     @PreUpdate
