@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS contato (
     "nome" VARCHAR(50) NOT NULL,
     "telefone" VARCHAR(11) NOT NULL UNIQUE,
     "criado_em" TIMESTAMP DEFAULT now(),
-    "modificado_em" TIMESTAMP DEFAULT now(),
+    "modificado_em" TIMESTAMP DEFAULT NULL,
     PRIMARY KEY("id"),
     CONSTRAINT "FK_agenda_id" FOREIGN KEY ("agenda_id") REFERENCES "agenda"("id") ON UPDATE CASCADE ON DELETE SET NULL
 );
