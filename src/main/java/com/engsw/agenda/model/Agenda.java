@@ -1,9 +1,13 @@
-package com.engsw.agenda.model.agenda;
+package com.engsw.agenda.model;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.NoArgsConstructor;
@@ -22,5 +26,7 @@ public class Agenda {
         this.nome = nome;
     }
 
-    //poderia difinir os metodos aqui ou aplicar a interface para Agenda q se comunica com interface de contato (diag de classes do prof)
+    @OneToMany(mappedBy = "agenda", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Contato> contatos = new ArrayList<>();
+
 }
