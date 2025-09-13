@@ -3,10 +3,8 @@ package com.engsw.agenda.dto.contato;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
-import com.engsw.agenda.model.Agenda;
 import com.engsw.agenda.model.Contato;
 
-import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 

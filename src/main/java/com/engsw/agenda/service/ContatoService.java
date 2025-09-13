@@ -1,26 +1,17 @@
 package com.engsw.agenda.service;
 
 import java.time.LocalDateTime;
-import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 import java.util.stream.Collectors;
-
-import org.hibernate.type.descriptor.java.LocalDateTimeJavaType;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cglib.core.Local;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-
 import com.engsw.agenda.dto.contato.ContatoDTO;
 import com.engsw.agenda.dto.contato.ContatoRespostaDTO;
 import com.engsw.agenda.model.Contato;
 import com.engsw.agenda.repository.ContatoRepository;
-
-import io.swagger.v3.oas.annotations.parameters.RequestBody;
 import jakarta.persistence.EntityNotFoundException;
-import jakarta.validation.Valid;
 
 @Service
 public class ContatoService {
@@ -42,7 +33,7 @@ public class ContatoService {
                         contatoRepository.findById(contatoId)
                         .orElseThrow(() -> new EntityNotFoundException("Contato não encontrado"));
 
-                        
+
         if (contatoNovo.getNome() != null) {
             contato.setNome(contatoNovo.getNome());
         }
