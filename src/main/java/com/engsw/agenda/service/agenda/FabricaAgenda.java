@@ -13,9 +13,7 @@ public class FabricaAgenda {
 
     private FabricaAgenda(){}
 
-    public IAgenda criarAgenda(int tipo){
-        return null;
-    }
+   
 
 }
 
