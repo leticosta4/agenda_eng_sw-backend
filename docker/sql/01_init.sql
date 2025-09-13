@@ -1,3 +1,4 @@
+
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
 CREATE TABLE IF NOT EXISTS agenda (
@@ -16,6 +17,7 @@ CREATE TABLE IF NOT EXISTS contato (
     PRIMARY KEY("id"),
     CONSTRAINT "FK_agenda_id" FOREIGN KEY ("agenda_id") REFERENCES "agenda"("id") ON UPDATE CASCADE ON DELETE SET NULL
 );
+
 
 -- INSERT INTO agenda (nome) VALUES
 -- ('Agenda de Fulano');
