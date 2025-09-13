@@ -1,5 +1,6 @@
 package com.engsw.agenda.service.agenda;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 import com.engsw.agenda.model.Contato;
@@ -39,7 +40,7 @@ public class AgendaList implements IAgenda{
     }
 
     @Override
-    public List<Contato> getListaAgenda() {
+    public Collection<Contato> getListaAgenda() {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'getListaAgenda'");
     }

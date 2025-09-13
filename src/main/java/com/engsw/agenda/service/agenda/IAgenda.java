@@ -1,6 +1,6 @@
 package com.engsw.agenda.service.agenda;
 
-import java.util.List;
+import java.util.Collection;
 
 import com.engsw.agenda.model.Contato;
 
@@ -9,5 +9,5 @@ public interface IAgenda {
     String getContato(String telefone);
     boolean adicionaContato(Contato contato);
     boolean removeContato(String telefone);
-    List<Contato> getListaAgenda(); //list por causa de retorno para o front
+    Collection<Contato> getListaAgenda();
 }

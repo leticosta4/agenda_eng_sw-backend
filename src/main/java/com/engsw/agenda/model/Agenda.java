@@ -1,6 +1,5 @@
 package com.engsw.agenda.model;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Collection;
 import java.util.UUID;
 
 import jakarta.persistence.CascadeType;
@@ -33,6 +32,5 @@ public class Agenda {
     }
 
     @OneToMany(mappedBy = "agenda", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Contato> contatos = new ArrayList<>();
-
+    private Collection<Contato> contatos;
 }
